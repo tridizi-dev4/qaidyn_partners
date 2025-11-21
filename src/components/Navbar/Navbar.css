@@ -391,6 +391,41 @@
   .dropdown-item:hover {
     padding-left: 20px;
   }
+  /* Make the entire slide-in menu scrollable */
+  .nav-menu {
+    overflow-y: auto !important;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Make each dropdown submenu scrollable */
+  .dropdown-menu {
+    overflow-y: auto !important;
+    max-height: 300px; /* adjust if needed */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Make nested submenu scrollable too */
+  .submenu {
+    overflow-y: auto !important;
+    max-height: 250px; 
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbars (mobile + desktop) */
+  .nav-menu::-webkit-scrollbar,
+  .dropdown-menu::-webkit-scrollbar,
+  .submenu::-webkit-scrollbar {
+    width: 0 !important;
+    background: transparent !important;
+  }
+
+  .nav-menu,
+  .dropdown-menu,
+  .submenu {
+    scrollbar-width: none !important; /* Firefox */
+  }
+
 }
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
