@@ -83,23 +83,31 @@ const Navbar = ({ openContactModal }) => {
     }
   };
 
-  // Toggle Services Dropdown - explicit open/close
-  const toggleServicesDropdown = () => {
+  // Toggle Services Dropdown - FIXED VERSION
+  const toggleServicesDropdown = (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    
     if (servicesDropdownOpen) {
+      // If already open, close everything
       setServicesDropdownOpen(false);
       setOpenSubmenus({});
     } else {
+      // If closed, open services and close resources
       setServicesDropdownOpen(true);
       setResourcesDropdownOpen(false);
       setOpenSubmenus({});
     }
   };
 
-  // Toggle Resources Dropdown - explicit open/close
-  const toggleResourcesDropdown = () => {
+  // Toggle Resources Dropdown - FIXED VERSION
+  const toggleResourcesDropdown = (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    
     if (resourcesDropdownOpen) {
+      // If already open, close it
       setResourcesDropdownOpen(false);
     } else {
+      // If closed, open resources and close services + submenus
       setResourcesDropdownOpen(true);
       setServicesDropdownOpen(false);
       setOpenSubmenus({});
@@ -141,7 +149,7 @@ const Navbar = ({ openContactModal }) => {
                 <span className={`dropdown-arrow ${servicesDropdownOpen ? 'open' : ''}`}>▼</span>
               </button>
               <div className={`dropdown-menu ${servicesDropdownOpen ? 'show' : ''}`}>
-                <div className="dropdown-item has-submenu" onClick={() => toggleSubmenu('managed-it')}>
+                <div className="dropdown-item has-submenu" onClick={(e) => { e.stopPropagation(); toggleSubmenu('managed-it'); }}>
                   Managed IT Services
                   <span className={`submenu-arrow ${openSubmenus['managed-it'] ? 'open' : ''}`}>▶</span>
                 </div>
@@ -153,7 +161,7 @@ const Navbar = ({ openContactModal }) => {
                   ))}
                 </div>
 
-                <div className="dropdown-item has-submenu" onClick={() => toggleSubmenu('managed-security')}>
+                <div className="dropdown-item has-submenu" onClick={(e) => { e.stopPropagation(); toggleSubmenu('managed-security'); }}>
                   Managed Security Services
                   <span className={`submenu-arrow ${openSubmenus['managed-security'] ? 'open' : ''}`}>▶</span>
                 </div>
@@ -165,7 +173,7 @@ const Navbar = ({ openContactModal }) => {
                   ))}
                 </div>
 
-                <div className="dropdown-item has-submenu" onClick={() => toggleSubmenu('cloud-infrastructure')}>
+                <div className="dropdown-item has-submenu" onClick={(e) => { e.stopPropagation(); toggleSubmenu('cloud-infrastructure'); }}>
                   Cloud and Infrastructure services
                   <span className={`submenu-arrow ${openSubmenus['cloud-infrastructure'] ? 'open' : ''}`}>▶</span>
                 </div>
@@ -177,7 +185,7 @@ const Navbar = ({ openContactModal }) => {
                   ))}
                 </div>
 
-                <div className="dropdown-item has-submenu" onClick={() => toggleSubmenu('security-assessments')}>
+                <div className="dropdown-item has-submenu" onClick={(e) => { e.stopPropagation(); toggleSubmenu('security-assessments'); }}>
                   Security Assessments and compliance
                   <span className={`submenu-arrow ${openSubmenus['security-assessments'] ? 'open' : ''}`}>▶</span>
                 </div>
@@ -189,7 +197,7 @@ const Navbar = ({ openContactModal }) => {
                   ))}
                 </div>
 
-                <div className="dropdown-item has-submenu" onClick={() => toggleSubmenu('data-protection')}>
+                <div className="dropdown-item has-submenu" onClick={(e) => { e.stopPropagation(); toggleSubmenu('data-protection'); }}>
                   Data Protection and Recovery
                   <span className={`submenu-arrow ${openSubmenus['data-protection'] ? 'open' : ''}`}>▶</span>
                 </div>
