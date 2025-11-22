@@ -470,26 +470,32 @@
 
   /* Mobile Dropdown Items */
   .dropdown-item {
-    padding: 12px 30px 12px 45px;
-    font-size: 14px;
+    padding: 14px 30px;
+    font-size: 15px;
     border-left: none;
     border-bottom: 1px solid #e8e8e8;
+    background: #ffffff;
   }
 
   .dropdown-item:hover {
-    padding-left: 50px;
-    background: #f0f7ff;
+    padding-left: 35px;
+    background: #f8f9fa;
   }
 
   .dropdown-item.has-submenu {
-    background: white;
+    background: #ffffff;
+    font-weight: 500;
+  }
+
+  .dropdown-item.has-submenu:hover {
+    background: #f8f9fa;
   }
 
   /* Mobile Submenu */
   .submenu {
     background: #ffffff;
     border-left: 3px solid #4A90E2;
-    margin: 0 0 0 30px;
+    margin: 0;
     border-radius: 0;
     max-height: 0;
     overflow: hidden;
@@ -498,13 +504,15 @@
 
   .submenu.show {
     max-height: 1000px;
+    background: #ffffff;
   }
 
   .submenu-item {
-    padding: 10px 20px 10px 30px;
-    font-size: 13px;
+    padding: 14px 20px 14px 50px;
+    font-size: 14px;
     border-bottom: 1px solid #f0f0f0;
-    background: white;
+    background: #ffffff;
+    color: #555;
   }
 
   .submenu-item:last-child {
@@ -512,12 +520,13 @@
   }
 
   .submenu-item::before {
-    left: 15px;
+    display: none;
   }
 
   .submenu-item:hover {
-    padding-left: 35px;
-    background: #f0f7ff;
+    padding-left: 55px;
+    background: #f8f9fa;
+    color: #4A90E2;
   }
 
   /* Mobile Contact Button */
