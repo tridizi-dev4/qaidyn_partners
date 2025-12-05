@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Aboutus.css";
 import girlImage from "../../assets/AboutUs/AboutUs1.png";
 import rectngleBox from "../../assets/AboutUs/AboutUs2.png";
@@ -15,6 +15,9 @@ import Icon2 from "../../assets/AboutUs/aboutIcon2.png";
 import Icon3 from "../../assets/AboutUs/aboutIcon3.png";
 
 const AboutPage = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <header className="header">

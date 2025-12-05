@@ -143,7 +143,7 @@
 }
 
 /* container */
-.aboutus_last_container {
+.policy_last_container {
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -158,18 +158,18 @@
 }
 
 /* inner banner area */
-.aboutus_last_inner {
+.policy_last_inner {
   width: 95%;
   height: 15vw;
-  background: #17b2b0;                 /* teal background (match screenshot) */
+  background: #17b2b0;     
   color: #fff;
   border-radius: 8px;
   padding: 3rem 5rem; 
-  padding-top: 4rem;                 /* desktop padding */
+  padding-top: 4rem;                
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  overflow: hidden;                    /* hide parts of decorative images if needed */
+  overflow: hidden;              
   box-shadow: 0 8px 30px rgba(3, 19, 34, 0.06);
 }
 
@@ -216,8 +216,11 @@
 .decor-left {
   position: absolute;
   top: 18.55%;
-  transform: translate(-535.7%, -49.6%); /* push left so it appears outside the banner */
-  width: 6.6rem; /* desktop size for semi circle */
+  transform: translate(
+    -485.5%,
+    -10%
+  );
+  width: 6.6rem;
   height: auto;
   z-index: 4;
   pointer-events: none;
@@ -230,26 +233,19 @@
   width: 10rem;
   height: auto;
   z-index: 4;
-  margin-left: 25.3vw;
+  margin-left: 63vw;
   margin-top: 11.5vw;
   pointer-events: none;
   opacity: 0.98;
 }
 
-/* Tweak the absolute positions to anchor relative to the centered .aboutus_last_inner */
-.aboutus_last_container .decor-left,
-.aboutus_last_container .decor-right {
-  /* Re-position relative to center of page by using transform from parent center */
-  left: 50%;
-  right: auto;
-}
 
 
 /* Responsive adjustments */
 
 /* Medium tablet */
 @media (max-width: 1024px) {
-  .aboutus_last_inner {
+  .policy_last_inner {
     padding: 2.6rem 3rem;
   }
 
@@ -270,7 +266,7 @@
 
 /* Mobile layout */
 @media (max-width: 1024px) {
-  .aboutus_last_inner {
+  .policy_last_inner {
     padding: 2.6rem 3rem;
       width: 95%;
   height: 15vw;
@@ -293,7 +289,7 @@
 
 /* Mobile layout */
 @media (max-width: 600px) {
-  .aboutus_last_container {
+  .policy_last_container {
     width: 104vw;
     margin: 0vw auto;
     margin-left: -10vw;
@@ -302,7 +298,7 @@
     height: 50vw;
   }
 
-  .aboutus_last_inner {
+  .policy_last_inner {
     border-radius: 8px;
     text-align: center;
     height: 70vw;
@@ -334,7 +330,7 @@
   .decor-right {
     width: 7.4rem;
     bottom: 0.6rem;
-    transform: translate(-45%, 125%);
+    transform: translate(-173%, 120%);
     left: 50%;
   }
 }
@@ -342,7 +338,7 @@
 
 /* Very small phones: stack and ensure images don't overlap text */
 @media (max-width: 360px) {
-  .aboutus_last_inner {
+  .policy_last_inner {
     padding: 1.8rem 1rem;
   }
 

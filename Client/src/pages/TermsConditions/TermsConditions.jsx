@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./TermsConditions.css"; // create or import into your main css
+import "../ProvacyPolicy/Privacypolicy.css"
 import Footer from "../../components/Footer/footer";
 import Navbar from "../../components/Navbar/Navbar";
 import semiCircle from "../../assets/privacypolicy/Vector.png";
@@ -9,6 +10,9 @@ const lorem =
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 
 const TermsAndConditions = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <header className="header">
@@ -64,7 +68,7 @@ const TermsAndConditions = () => {
           </section>
 
           <section
-            className="aboutus_last_container"
+            className="policy_last_container"
             role="region"
             aria-label="Let's work together call to action"
           >
@@ -75,7 +79,7 @@ const TermsAndConditions = () => {
               className="decor-left"
             />
 
-            <div className="aboutus_last_inner">
+            <div className="policy_last_inner">
               <h2 className="work-title">Let's Work Together</h2>
               <p className="work-sub">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
