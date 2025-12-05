@@ -20,7 +20,7 @@ return(
                 <p>Blogs</p>
               </div>
               <div className="footer1-column">
-                <a href="#promotions">Promotions</a>
+<a href="/promotions#promotions">Promotions</a>
                 <a href="#guidelines">Guidelines</a>
               </div>
               <div className="footer1-column">

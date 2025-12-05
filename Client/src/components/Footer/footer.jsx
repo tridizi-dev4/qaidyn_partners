@@ -15,7 +15,7 @@ return(
           <div className="links_navigation_pages">
             <div className="footer-links">
               <a href="#about">About Us</a>
-              <a href="#promotions">Promotions</a>
+<a href="/promotions#promotions">Promotions</a>
               <a href="#resources">Resources</a>
               <a href="#industries">Industries</a>
               <a href="#careers">Careers</a>

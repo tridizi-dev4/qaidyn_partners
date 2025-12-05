@@ -1,0 +1,536 @@
+.industries-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111827;
+}
+
+.industries-header {
+  position: relative;
+  z-index: 10;
+}
+
+.industries-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+}
+
+/* hero */
+
+.industries-hero {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 90px;
+}
+
+.industries-title {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.industries-subtitle {
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #6b7280;
+}
+
+/* industries grid */
+
+.industries-section {
+  max-width: 1320px;
+  margin: 0 auto 80px;
+  background: white;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: -20px;
+}
+
+/* card ~293×343, radius 17, border 0.5px */
+
+.industries-card {
+  background: #ffffff;
+  border-radius: 17px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+  border: 0.5px solid #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  min-height: 343px;
+}
+
+/* icon circle 79×79 */
+
+.industries-icon-wrap {
+  width: 79px;
+  height: 79px;
+  border-radius: 50%;
+  background: #cde8fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.industries-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.industries-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.industries-card-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 28px;
+}
+
+/* See Explained – 16px, medium, blue */
+
+.industries-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0098ff;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.industries-link-arrow {
+  font-size: 16px;
+  transform: translateY(1px);
+}
+
+/* ================== CORE SERVICES (FIGMA MATCH — FINAL FINAL) ================== */
+
+.core-services-section {
+  max-width: 1104px;
+  margin: 72px auto 80px;
+  text-align: center;
+}
+
+/* "Our Core services" */
+.core-services-title {
+  font-family: "Poppins", system-ui;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-bottom: 32px;
+}
+
+/* 4 equal cards (270 × 269) in 1104 group */
+.core-services-grid {
+  width: 1104px;
+  min-height: 274px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  column-gap: 24px;
+  align-items: stretch;
+}
+
+/* CARD BASE */
+.core-service-card {
+  width: 270px;
+  min-height: 269px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+  padding: 32px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: all 0.35s ease;
+}
+
+/* HOVER – pink gradient + higher shadow on all cards */
+.core-service-card:hover {
+  background: linear-gradient(
+    135deg,
+    #ffd7ef 0%,
+    #ffd7ef 48%,
+    #ffffff 78%,
+    #ffffff 100%
+  );
+  box-shadow: 0 24px 40px rgba(51, 61, 116, 0.28);
+  transform: translateY(-4px);
+}
+
+/* --------------- ICON + TEXT STACK --------------- */
+
+/* vertical stack: icon on top, then title */
+.core-service-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;               /* space between icon and title */
+  margin-bottom: 8px;
+}
+
+/* ICON WRAP (38×38 circle, inner 24×24 icon) */
+.core-service-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #0088ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(51, 61, 212, 0.3);
+}
+
+.core-service-icon {
+  width: 24px;           /* matches 24×24 glyph from Figma */
+  height: 24px;
+  object-fit: contain;
+}
+
+/* SERVICE NAME – Rubik 20px, 133% */
+.core-service-name {
+  font-family: "Rubik", system-ui;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.33;
+  color: #111827;
+}
+
+/* DESCRIPTION – Rubik 15px, 100%, width ~237 */
+.core-service-text {
+  font-family: "Rubik", system-ui;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  color: #6b7280;
+  margin-top: 4px;
+  margin-bottom: 18px;
+}
+
+/* "Learn More" – Rubik 13px with arrow */
+.core-service-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Rubik", system-ui;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1;
+  color: #0088ff;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.core-service-link-arrow {
+  font-size: 16px;
+  transform: translateY(1px);
+}
+
+
+/* ================= TEXT + CONSULTATION (FIGMA MATCH) ================= */
+
+.content-consult-section {
+  max-width: 1320px;
+  margin: 80px auto 96px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT SIDE --------------------------------------------------------- */
+
+.content-consult-left {
+  padding-right: 60px;
+}
+
+.content-title {
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.25;         
+  color: #111827;
+  max-width: 580px;
+  margin-bottom: 18px;
+  margin-left: 90px;
+}
+
+/* body text – Rubik 18px, 155%, width ≈ 508 */
+.content-text {
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;         /* 155% */
+  color: #676767;
+  max-width: 520px;
+  margin-bottom: 32px;
+  margin-left: 90px;
+}
+
+/* "Learn More" pill button – 174×55, radius 10, padding 15/25, gap 10 */
+.content-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 25px;
+  min-height: 55px;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 90px;
+}
+
+.content-btn-arrow {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* RIGHT SIDE -------------------------------------------------------- */
+
+.content-consult-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Card – 414×397, radius 16 */
+.consult-card {
+  width: 100%;
+  max-width: 414px;
+  min-height: 397px;
+  background: #D5FAFC;
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+  margin-right: 50px;
+}
+
+/* "Get Consultation" – Rubik 600 24px, center */
+.consult-title {
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+/* form stack */
+.consult-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Inputs – 354×50, radius 5, border #676767 */
+.consult-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #676767;
+  padding: 0 12px;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  background: #ffffff;
+}
+
+.consult-input::placeholder {
+  color: #9ca3af;
+}
+
+.consult-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3);
+}
+
+/* Submit – 158×45, radius 10, padding 10/50, center */
+.consult-submit {
+  margin-top: 12px;
+  align-self: center;
+  width: 158px;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  background: #7c3aed;
+  color: #ffffff;
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ================= BOTTOM CTA (FIGMA MATCH) ================= */
+
+.industries-cta {
+  max-width: 1280px;            /* outer 1280 × 367 */
+  margin: 0 auto 96px;
+}
+
+.industries-cta-inner {
+  width: 100%;
+  max-width: 1054px;            /* inner CTA ~1054 × 291 */
+  margin: 0 auto;
+  min-height: 291px;
+  background: #1db5be;
+  border-radius: 0;             /* straight edges like Figma */
+  padding: 72px 80px;           /* space top/bottom & sides */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 72px;
+}
+
+/* left block 343 × 128 approx */
+.industries-cta-text {
+  max-width: 360px;
+}
+
+/* heading – Poppins 26.35 / 32.57, bold, white */
+.industries-cta-title {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+/* body – Poppins 18, medium, white */
+.industries-cta-desc {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;      /* ~21.96px */
+  color: #ffffff;
+}
+
+/* right buttons frame – width ~245, height ~45 */
+.industries-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;               /* Figma ~11.7 */
+}
+
+/* shared button base */
+.cta-primary,
+.cta-secondary {
+  min-width: 110px;
+  height: 45px;
+  padding: 0 22px;
+  border-radius: 6px;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 13px;         /* ~13.18px */
+  line-height: 1.2;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+/* purple "Get Started" */
+.cta-primary {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+/* white "Learn more" with #5f6f86 text */
+.cta-secondary {
+  background: #ffffff;
+  color: #5f6f86;
+}
+/* responsive */
+
+@media (max-width: 1024px) {
+  .industries-main {
+    padding-top: 120px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .core-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-consult-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .content-consult-right {
+    justify-content: flex-start;
+  }
+
+  .industries-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .industries-main {
+    padding: 110px 16px 60px;
+  }
+
+  .industries-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .core-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-cta-inner {
+    padding: 28px 20px;
+  }
+}
