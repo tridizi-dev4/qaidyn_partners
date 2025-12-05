@@ -17,9 +17,9 @@ return(
           <div className="links_navigation_pages">
             <div className="footer-links">
               <p onClick={()=>navigate("/about")}>About Us</p>
-              <p href="#promotions">Promotions</p>
+              <p onClick={()=>navigate("/promotions#promotions")}>Promotions</p>
               <p href="#resources">Resources</p>
-              <p href="#industries">Industries</p>
+              <p onClick={()=>navigate("/industries")}>Industries</p>
               <p href="#careers">Careers</p>
             </div>
 <div className="footer-links-blue">
