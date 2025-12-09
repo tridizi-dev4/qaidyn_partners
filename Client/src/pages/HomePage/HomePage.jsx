@@ -6,6 +6,11 @@ import Navbar from "../../components/Navbar/Navbar.jsx";
 import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.jfif";
 import walmartLogo from "../../assets/walmart.png";
+import Icon1 from "../../assets/AboutUs/aboutIcon.png";
+import Icon4 from "../../assets/AboutUs/aboutIcon4.png";
+import Icon2 from "../../assets/AboutUs/aboutIcon2.png";
+import Icon3 from "../../assets/AboutUs/aboutIcon3.png";
+
 // Icons
 import icon1 from "../../assets/icon1.png";
 import icon2 from "../../assets/icon2.png";
@@ -20,7 +25,6 @@ import icon10 from "../../assets/icon10.png";
 import icon11 from "../../assets/icon11.png";
 import icon12 from "../../assets/icon12.png";
 import icon13 from "../../assets/icon13.png";
-
 import icon14 from "../../assets/icon14.png";
 import icon15 from "../../assets/icon15.png";
 
@@ -45,19 +49,25 @@ const HomePage = () => {
   const [activeIndustryModal, setActiveIndustryModal] = useState(null);
   const [activeBlogModal, setActiveBlogModal] = useState(null);
   const [contactModalOpen, setContactModalOpen] = useState(false);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector(".header");
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
+      if (header) {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -80,17 +90,24 @@ const HomePage = () => {
     return () => observer.disconnect();
   }, []);
 
-  const navigate = useNavigate();
-
+  // Map titles/details -> routes
   const navigateMap = {
-    // Modal title → route
+    // Main service tiles
+    "Managed IT Services": "/services/managed-it",
+    "Managed Security Services": "/services/managed-security",
+    "Cloud and Infrastructure Services": "/services/cloud-infrastructure",
+    "Security Assessments and compliance": "/services/security-assessment",
+    "Data Protection and Recovery": "/services/data-protection",
+
+    // Managed IT
     Helpdesk: "/services/managed-it/helpdesk",
     "Devices Setup and Configuration": "/services/managed-it/devices-setup",
-    "patch Management": "/services/managed-it/patch-management",
+    "Patch Management": "/services/managed-it/patch-management",
     "Network Management": "/services/managed-it/network-management",
-    Backup: "/services/managed-it/backup",
+    Backup: "/services/data-protection/backup",
     "Vendor Co-ordination": "/services/managed-it/vendor-coordination",
 
+    // Managed Security
     "Threat Detection": "/services/managed-security/threat-detection",
     "End Point and Network protection":
       "/services/managed-security/endpoint-protection",
@@ -98,13 +115,16 @@ const HomePage = () => {
     "Continuous Security Monitoring":
       "/services/managed-security/security-monitoring",
 
+    // Cloud & Infra
     "Cloud Setup and Migration": "/services/cloud-infrastructure/cloud-setup",
     "Virtual Private Servers": "/services/cloud-infrastructure/virtual-servers",
     "Virtual Desktops": "/services/cloud-infrastructure/virtual-desktops",
     "IT Infrastructure and planning":
       "/services/cloud-infrastructure/it-infrastructure",
 
-    "ISO 27001 Assessment and Audit": "/services/security-assessment/iso27001",
+    // Security Assessment
+    "ISO 27001 Assessment and Audit":
+      "/services/security-assessment/iso27001",
     "iRAP Assessment and Audit": "/services/security-assessment/irap",
     "SOC2 Assessment and Audit": "/services/security-assessment/soc2",
     "Risk Management": "/services/security-assessment/risk-management",
@@ -112,7 +132,7 @@ const HomePage = () => {
     "Security Awareness Training":
       "/services/security-assessment/security-training",
 
-    Backup: "/services/data-protection/backup",
+    // Data Protection
     "Disaster Recovery": "/services/data-protection/disaster-recovery",
     "Ransomware Recovery": "/services/data-protection/ransomware-recovery",
     Encryption: "/services/data-protection/encryption",
@@ -121,7 +141,7 @@ const HomePage = () => {
   const serviceDetails = {
     0: [
       "Helpdesk",
-      "Devices setup and configuration",
+      "Devices Setup and Configuration",
       "Patch Management",
       "Network Management",
       "Backup",
@@ -163,14 +183,12 @@ const HomePage = () => {
       description:
         "Advanced security solutions to protect your digital assets and ensure business continuity.",
     },
-
     {
       title: "Cloud and Infrastructure Services",
       icon: service3,
       description:
         "Scalable cloud infrastructure designed to grow with your business needs.",
     },
-
     {
       title: "Security Assessments and compliance",
       icon: service4,
@@ -431,7 +449,7 @@ const HomePage = () => {
     },
   ];
 
-  // Define logos array for auto-scroll
+  // Logos for auto-scroll
   const companyLogos = [
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg",
@@ -455,6 +473,7 @@ const HomePage = () => {
       alt: "FedEx",
     },
   ];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -498,7 +517,6 @@ const HomePage = () => {
       <section className="logos-section">
         <div className="container-full">
           <div className="logos-container">
-            {/* Duplicate logos for infinite scroll effect */}
             {[...companyLogos, ...companyLogos].map((logo, index) => (
               <div key={index} className="logo-item">
                 <img src={logo.src} alt={logo.alt} />
@@ -508,33 +526,57 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section (two rows layout) */}
       <section className="services-section animate-on-scroll" id="services">
         <div className="container-full">
-          <h2 className="section-title">Our Core Services</h2>
-          <p className="section-subtitle">
-            Comprehensive IT solutions designed to elevate your business
-            operations and drive sustainable growth
-          </p>
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="service-card-home"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => openServiceModal(index)}
-              >
-                <div className="service-icon-wrapper">
+          <div className="cs-services-header">
+            <h2 className="cs-services-title">Our Core Services</h2>
+            <p className="cs-sub">
+              Comprehensive IT solutions designed to elevate your business
+              operations and drive sustainable growth.
+            </p>
+          </div>
+
+          <div className="cs-services-wrapper">
+            {/* TOP ROW – first 3 services */}
+            <div className="cs-service-row">
+              {services.slice(0, 3).map((service, index) => (
+                <div
+                  key={index}
+                  className="cs-service-item"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => openServiceModal(index)}
+                >
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="service-icon-img"
+                    className="cs-service-icon"
                   />
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* BOTTOM ROW – last 2 services */}
+            <div className="cs-service-row bottom">
+              {services.slice(3).map((service, index) => (
+                <div
+                  key={index + 3}
+                  className="cs-service-item"
+                  style={{ animationDelay: `${(index + 3) * 0.1}s` }}
+                  onClick={() => openServiceModal(index + 3)}
+                >
+                  <img
+                    src={service.icon}
+                    alt={service.title}
+                    className="cs-service-icon"
+                  />
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -556,9 +598,11 @@ const HomePage = () => {
               </div>
               <h3
                 className="modal-title"
-                onClick={() =>
-                  navigate(navigateMap[services[activeServiceModal].title])
-                }
+                onClick={() => {
+                  const route =
+                    navigateMap[services[activeServiceModal].title];
+                  if (route) navigate(route);
+                }}
               >
                 {services[activeServiceModal].title}
               </h3>
@@ -575,9 +619,12 @@ const HomePage = () => {
                     style={{
                       animationDelay: `${i * 0.1}s`,
                       backgroundColor: i === 0 ? "#E0F7FA" : "transparent",
-                      cursor: "pointer",
+                      cursor: navigateMap[detail] ? "pointer" : "default",
                     }}
-                    onClick={() => navigate(navigateMap[detail])}
+                    onClick={() => {
+                      const route = navigateMap[detail];
+                      if (route) navigate(route);
+                    }}
                   >
                     <span className="detail-bullet">•</span>
                     {detail}
@@ -599,10 +646,7 @@ const HomePage = () => {
           <p className="section-subtitle">
             Delivering specialized solutions across diverse sectors
           </p>
-          <div
-            className="industries-grid"
-            onClick={() => navigate("/industries")}
-          >
+          <div className="industries-grid">
             {industries.map((industry, index) => (
               <div
                 key={index}
@@ -617,12 +661,15 @@ const HomePage = () => {
                   />
                 </div>
                 <h3 className="industry-title">{industry.name}</h3>
-                <p className="industry-description">{industry.description}</p>
+                <p className="industry-description">
+                  {industry.description}
+                </p>
                 <a
                   href="#"
                   className="industry-link"
                   onClick={(e) => {
                     e.preventDefault();
+                    e.stopPropagation();
                     openIndustryModal(index);
                   }}
                 >
@@ -678,46 +725,47 @@ const HomePage = () => {
       )}
 
       {/* Success Stats Section */}
-      <section className="stats-section animate-on-scroll" id="stats">
-        <div className="container-full">
-          <div className="stats-content">
-            <div className="stats-left">
-              <h2 className="stats-title">Our 10 years of Success</h2>
-              <p className="stats-subtitle">
-                Building trust through excellence and innovation
-              </p>
-            </div>
-            <div className="stats-grid">
-              <div className="stat-item">
-                <div className="stat-icon-wrapper">
-                  <img src={icon12} alt="Employees" className="stat-icon-img" />
-                </div>
-                <div className="stat-value">100+</div>
+      <section
+        className="success-process-section animate-on-scroll"
+        id="stats"
+      >
+        <div className="success-left">
+          <div>
+            <h2 className="success-title">Our 10 years of Success</h2>
+            <p className="success-sub">
+              With our super powers we have reached this
+            </p>
+          </div>
+
+          <div className="stats-grid">
+            <div className="stat-item">
+              <img src={Icon1} alt="Employees working" />
+              <div className="stat-text">
+                <div className="stat-number">100+</div>
                 <div className="stat-label">Employees working</div>
               </div>
-              <div className="stat-item">
-                <div className="stat-icon-wrapper">
-                  <img
-                    src={icon13}
-                    alt="Data Storage"
-                    className="stat-icon-img"
-                  />
-                </div>
-                <div className="stat-value">2 Million</div>
+            </div>
+
+            <div className="stat-item">
+              <img src={Icon4} alt="Data Stored in Cloud" />
+              <div className="stat-text">
+                <div className="stat-number">2 Million</div>
                 <div className="stat-label">Data Stored in Cloud</div>
               </div>
-              <div className="stat-item">
-                <div className="stat-icon-wrapper">
-                  <img src={icon14} alt="Countries" className="stat-icon-img" />
-                </div>
-                <div className="stat-value">50+</div>
+            </div>
+
+            <div className="stat-item">
+              <img src={Icon2} alt="Countries" />
+              <div className="stat-text">
+                <div className="stat-number">50+</div>
                 <div className="stat-label">Countries</div>
               </div>
-              <div className="stat-item">
-                <div className="stat-icon-wrapper">
-                  <img src={icon15} alt="Clients" className="stat-icon-img" />
-                </div>
-                <div className="stat-value">100+</div>
+            </div>
+
+            <div className="stat-item">
+              <img src={Icon3} alt="Clients" />
+              <div className="stat-text">
+                <div className="stat-number">100+</div>
                 <div className="stat-label">Clients</div>
               </div>
             </div>
