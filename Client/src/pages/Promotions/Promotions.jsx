@@ -1,7 +1,7 @@
 import React from "react";
 import "./Promotions.css";
 import Navbar from "../../components/Navbar/Navbar.jsx";
-import Footer from "../../components/Footer/footer.jsx";  
+import Footer from "../../components/Footer/footer.jsx";
 
 // PROMOTIONS IMAGES
 import heroImg from "../../assets/promotions/image 3.png";
@@ -41,7 +41,7 @@ const companyLogos = [
   },
 ];
 
-const Promotions = () => {
+const Promotions = ({ onOpenContact }) => {
   return (
     <div className="promotions-page">
       <header className="header">
@@ -62,7 +62,13 @@ const Promotions = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                 pulvinar, sapien ac facilisis gravida, velit arcu consequat.
               </p>
-              <button className="promotions-btn-primary">Get Started</button>
+              <button
+                type="button"
+                className="promotions-btn-primary"
+                onClick={onOpenContact}
+              >
+                Get Started
+              </button>
             </div>
             <div className="promotions-hero-right">
               <img

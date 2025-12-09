@@ -18,7 +18,6 @@ import step2Img from "../../assets/casestudies/Frame 47.png";
 import step3Img from "../../assets/casestudies/Frame 48.png";
 import step4Img from "../../assets/casestudies/Frame 49.png";
 
-
 const companyLogos = [
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg",
@@ -67,7 +66,7 @@ const testimonials = [
   },
 ];
 
-const CaseStudies = () => {
+const CaseStudies = ({ onOpenContact }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrev = () => {
@@ -98,7 +97,13 @@ const CaseStudies = () => {
               Provide a network for all your needs with ease and fun using
               NetONE. Discover interesting features from us.
             </p>
-            <button className="cs-btn-primary">Get Started</button>
+            <button
+              className="cs-btn-primary"
+              type="button"
+              onClick={onOpenContact}
+            >
+              Get Started
+            </button>
           </div>
 
           <div className="cs-hero-right">
@@ -106,53 +111,64 @@ const CaseStudies = () => {
           </div>
         </div>
       </section>
-<section className="cs-how">
-  <h2>How It Works</h2>
 
-  <div className="cs-timeline">
-    {/* blue rectangle line image */}
-    <img src={timelineImg} alt="" className="cs-timeline-bg" />
+      <section className="cs-how">
+        <h2>How It Works</h2>
 
-    <div className="cs-steps">
-      {/* STEP 1 – keep as is (text + pill + dot) */}
-      <div className="cs-step cs-step-1">
-        <div className="cs-num">1</div>
+        <div className="cs-timeline">
+          {/* blue rectangle line image */}
+          <img src={timelineImg} alt="" className="cs-timeline-bg" />
 
-        <p className="cs-step-desc-top">
-          Cyber safety, crime prevention,
-          <br />
-          defense, or enterprise security.
-        </p>
+          <div className="cs-steps">
+            {/* STEP 1 */}
+            <div className="cs-step cs-step-1">
+              <div className="cs-num">1</div>
 
-        <div className="cs-pill cs-pill-top">Select Your Focus</div>
+              <p className="cs-step-desc-top">
+                Cyber safety, crime prevention,
+                <br />
+                defense, or enterprise security.
+              </p>
 
-        <div className="cs-dot" />
-      </div>
+              <div className="cs-pill cs-pill-top">Select Your Focus</div>
 
-      {/* STEP 2 – use Frame 47.png */}
-      <div className="cs-step cs-step-2">
-        <div className="cs-num">2</div>
-        <img src={step2Img} alt="Get connected with cybersecurity & defense experts" className="cs-step-img" />
-      </div>
+              <div className="cs-dot" />
+            </div>
 
-      {/* STEP 3 – use Frame 48.png */}
-      <div className="cs-step cs-step-3">
-        <div className="cs-num">3</div>
-        <img src={step3Img} alt="Book Advisory – chat, video consultation, or workshops" className="cs-step-img" />
-      </div>
+            {/* STEP 2 */}
+            <div className="cs-step cs-step-2">
+              <div className="cs-num">2</div>
+              <img
+                src={step2Img}
+                alt="Get connected with cybersecurity & defense experts"
+                className="cs-step-img"
+              />
+            </div>
 
-      {/* STEP 4 – use Frame 49.png */}
-      <div className="cs-step cs-step-4">
-        <img src={step4Img} alt="Stay Protected – apply strategies for safety" className="cs-step-img" />
-        <div className="cs-num cs-num-bottom">4</div>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* STEP 3 */}
+            <div className="cs-step cs-step-3">
+              <div className="cs-num">3</div>
+              <img
+                src={step3Img}
+                alt="Book Advisory – chat, video consultation, or workshops"
+                className="cs-step-img"
+              />
+            </div>
 
+            {/* STEP 4 */}
+            <div className="cs-step cs-step-4">
+              <img
+                src={step4Img}
+                alt="Stay Protected – apply strategies for safety"
+                className="cs-step-img"
+              />
+              <div className="cs-num cs-num-bottom">4</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-    <section className="cs-services">
+      <section className="cs-services">
         <div className="cs-container">
           {/* TITLE */}
           <h2 className="cs-services-title">Our Core Services</h2>
@@ -240,69 +256,69 @@ const CaseStudies = () => {
 
       {/* SCROLLING LOGO STRIP */}
       <section className="cs-logos-section">
-  <div className="cs-logos-wrapper">
-    <div className="cs-logos-container">
-      {[...companyLogos, ...companyLogos].map((logo, index) => (
-        <div key={index} className="cs-logo-item">
-          <img src={logo.src} alt={logo.alt} />
+        <div className="cs-logos-wrapper">
+          <div className="cs-logos-container">
+            {[...companyLogos, ...companyLogos].map((logo, index) => (
+              <div key={index} className="cs-logo-item">
+                <img src={logo.src} alt={logo.alt} />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       <section className="cs-testimonial">
-  <div className="cs-testimonial-inner">
+        <div className="cs-testimonial-inner">
+          {/* LEFT SIDE */}
+          <div className="cs-testimonial-left">
+            <h2 className="cs-testimonial-title">
+              Feedback About Their Experience With Us
+            </h2>
 
-    {/* LEFT SIDE */}
-    <div className="cs-testimonial-left">
-      <h2 className="cs-testimonial-title">
-        Feedback About Their Experience With Us
-      </h2>
+            <p className="cs-testimonial-subtitle">
+              Read testimonials from our satisfied clients. See how our
+              infrastructure services made a difference.
+            </p>
 
-      <p className="cs-testimonial-subtitle">
-        Read testimonials from our satisfied clients. See how our
-        infrastructure services made a difference.
-      </p>
+            <div className="cs-slider-controls">
+              <button className="cs-slider-btn" onClick={handlePrev}>
+                ←
+              </button>
+              <button className="cs-slider-btn" onClick={handleNext}>
+                →
+              </button>
+            </div>
+          </div>
 
-      <div className="cs-slider-controls">
-        <button className="cs-slider-btn" onClick={handlePrev}>←</button>
-        <button className="cs-slider-btn" onClick={handleNext}>→</button>
-      </div>
-    </div>
+          {/* RIGHT CARD */}
+          <div className="cs-testimonial-card">
+            <div className="cs-testimonial-image">
+              <img src={active.avatar} alt={active.name} />
+            </div>
 
-    {/* RIGHT CARD */}
-    <div className="cs-testimonial-card">
-      <div className="cs-testimonial-image">
-        <img src={active.avatar} alt={active.name} />
-      </div>
+            <div className="cs-testimonial-texts">
+              <h3 className="cs-testimonial-name">{active.name}</h3>
+              <p className="cs-testimonial-role">{active.role}</p>
 
-      <div className="cs-testimonial-texts">
-        <h3 className="cs-testimonial-name">{active.name}</h3>
-        <p className="cs-testimonial-role">{active.role}</p>
+              <img
+                src={starsImg}
+                alt="rating"
+                className="cs-testimonial-stars"
+              />
 
-        <img
-          src={starsImg}
-          alt="rating"
-          className="cs-testimonial-stars"
-        />
+              <p className="cs-testimonial-quote">{active.text}</p>
+            </div>
 
-        <p className="cs-testimonial-quote">{active.text}</p>
-      </div>
-
-      <div className="cs-testimonial-quote-pill">
-        <img
-          src={quoteIcon}
-          alt="quote"
-          className="cs-testimonial-quote-icon"
-        />
-      </div>
-    </div>
-
-  </div>
-</section>
-
+            <div className="cs-testimonial-quote-pill">
+              <img
+                src={quoteIcon}
+                alt="quote"
+                className="cs-testimonial-quote-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="cs-cta">
         <div className="cs-container cs-cta-inner">

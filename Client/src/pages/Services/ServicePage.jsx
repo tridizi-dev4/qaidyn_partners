@@ -8,11 +8,9 @@ import Footer from "../../components/Footer/footer.jsx";
 
 import { servicesData } from "../Services/servicesData.js";
 
-const ServicePage = () => {
+const ServicePage = ({ onOpenContact }) => {
   const { category, slug } = useParams();
   const navigate = useNavigate();
-
-  // current service
   const service = servicesData.find(
     (item) => item.category === category && item.slug === slug
   );
@@ -58,7 +56,11 @@ const ServicePage = () => {
 
               <p className="helpdesk-hero-desc">{hero.desc}</p>
 
-              <button className="helpdesk-primary-btn">
+              <button
+                type="button"
+                className="helpdesk-primary-btn"
+                onClick={onOpenContact}
+              >
                 Get Started <span className="helpdesk-btn-arrow">→</span>
               </button>
             </div>
@@ -157,10 +159,14 @@ const ServicePage = () => {
               <p>{cta.text}</p>
             </div>
             <div className="helpdesk-cta-actions">
-              <button className="helpdesk-primary-btn small">
+              <button
+                type="button"
+                className="helpdesk-primary-btn small"
+                onClick={onOpenContact}
+              >
                 {cta.primaryLabel}
               </button>
-              <button className="helpdesk-secondary-btn small">
+              <button className="helpdesk-secondary-btn small" type="button">
                 {cta.secondaryLabel}
               </button>
             </div>
@@ -194,7 +200,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* TESTIMONIAL */}
         <section className="helpdesk-testimonial">
           <div className="helpdesk-testimonial-inner">
             <div className="helpdesk-testimonial-left">

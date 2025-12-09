@@ -1,7 +1,7 @@
 import React from "react";
 import "./Industries.css";
 import Navbar from "../../components/Navbar/Navbar.jsx";
-import Footer from "../../components/Footer/footer.jsx";  
+import Footer from "../../components/Footer/footer.jsx";
 
 import icon1 from "../../assets/icon1.png";
 import icon2 from "../../assets/icon2.png";
@@ -17,7 +17,7 @@ import service2 from "../../assets/service2.png";
 import service3 from "../../assets/service3.png";
 import service4 from "../../assets/service4.png";
 
-const Industries = () => {
+const Industries = ({ onOpenContact }) => {
   const industries = [
     {
       title: "Healthcare",
@@ -103,7 +103,6 @@ const Industries = () => {
       </header>
 
       <main className="industries-main">
-        {/* Hero */}
         <section className="industries-hero">
           <h1 className="industries-title">Serving Industries</h1>
           <p className="industries-subtitle">
@@ -111,8 +110,6 @@ const Industries = () => {
             provide the best products to our patients.
           </p>
         </section>
-
-        {/* 8 industry cards */}
         <section className="industries-section">
           <div className="industries-grid">
             {industries.map((industry, index) => (
@@ -134,38 +131,33 @@ const Industries = () => {
             ))}
           </div>
         </section>
-
-        {/* core services */}
         <section className="core-services-section">
-  <h2 className="core-services-title">Our Core services</h2>
+          <h2 className="core-services-title">Our Core services</h2>
 
-  <div className="core-services-grid">
-    {coreServices.map((service, index) => (
-      <article className="core-service-card" key={index}>
-        <div className="core-service-header">
-          <div className="core-service-icon-wrap">
-            <img
-              src={service.icon}
-              alt={service.title}
-              className="core-service-icon"
-            />
+          <div className="core-services-grid">
+            {coreServices.map((service, index) => (
+              <article className="core-service-card" key={index}>
+                <div className="core-service-header">
+                  <div className="core-service-icon-wrap">
+                    <img
+                      src={service.icon}
+                      alt={service.title}
+                      className="core-service-icon"
+                    />
+                  </div>
+                  <h3 className="core-service-name">{service.title}</h3>
+                </div>
+
+                <p className="core-service-text">{service.description}</p>
+
+                <button className="core-service-link">
+                  <span>Learn More</span>
+                  <span className="core-service-link-arrow">→</span>
+                </button>
+              </article>
+            ))}
           </div>
-          <h3 className="core-service-name">{service.title}</h3>
-        </div>
-
-        <p className="core-service-text">{service.description}</p>
-
-        <button className="core-service-link">
-          <span>Learn More</span>
-          <span className="core-service-link-arrow">→</span>
-        </button>
-      </article>
-    ))}
-  </div>
-</section>
-
-
-        {/* text + consultation */}
+        </section>
         <section className="content-consult-section">
           <div className="content-consult-left">
             <h2 className="content-title">
@@ -206,8 +198,6 @@ const Industries = () => {
             </div>
           </div>
         </section>
-
-        {/* bottom CTA */}
         <section className="industries-cta">
           <div className="industries-cta-inner">
             <div className="industries-cta-text">
@@ -220,8 +210,16 @@ const Industries = () => {
               </p>
             </div>
             <div className="industries-cta-actions">
-              <button className="cta-primary">Get Started</button>
-              <button className="cta-secondary">Learn more</button>
+              <button
+                className="cta-primary"
+                type="button"
+                onClick={onOpenContact}
+              >
+                Get Started
+              </button>
+              <button className="cta-secondary" type="button">
+                Learn more
+              </button>
             </div>
           </div>
         </section>
