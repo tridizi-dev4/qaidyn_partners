@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import ContactPage from "./pages/ContactPage/ContactPage.jsx";
 import AboutPage from "./pages/AboutUs/Aboutus.jsx";
@@ -39,73 +39,75 @@ function App() {
 
   return (
     // 🔥 Entire app wrapped with EditModeProvider
-    <EditModeProvider>
-      <Router>
-        {/* popup rendered once for entire site */}
-        <ContactModal open={isContactOpen} onClose={handleCloseContact} />
+    <BrowserRouter>
+      <EditModeProvider>
+        <Router>
+          {/* popup rendered once for entire site */}
+          <ContactModal open={isContactOpen} onClose={handleCloseContact} />
 
-        <Routes>
-          {/* Pass onOpenContact to pages that need it */}
-          <Route
-            path="/"
-            element={<HomePage onOpenContact={handleOpenContact} />}
-          />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route
-            path="/about"
-            element={<AboutPage onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/industries"
-            element={<Industries onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/promotions"
-            element={<Promotions onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/services/:category/:slug"
-            element={<ServicePage onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/privacypolicy"
-            element={<PrivacyPolicy onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/TermsAndConditions"
-            element={<TermsAndConditions onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/careers"
-            element={<Career onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/blogs"
-            element={<Blogs onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/singleBlog/:id"
-            element={<SingleBlog onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/guidelines"
-            element={<Guidelines onOpenContact={handleOpenContact} />}
-          />
-          <Route
-            path="/case-studies"
-            element={<CaseStudies onOpenContact={handleOpenContact} />}
-          />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/createBlog" element={<CreateBlog />} />
-          <Route path="/manageblogs" element={<Manageblogs />} />
-          <Route path="/blog-updation" element={<UpdateBlog />} />
-          <Route path="/createCareer" element={<CareerCreation />} />
-          <Route path="/managecareers" element={<SmallCard />} />
-          <Route path="/career-update" element={<CareerUpdate />} />
-        </Routes>
-      </Router>
-    </EditModeProvider>
+          <Routes>
+            {/* Pass onOpenContact to pages that need it */}
+            <Route
+              path="/"
+              element={<HomePage onOpenContact={handleOpenContact} />}
+            />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route
+              path="/about"
+              element={<AboutPage onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/industries"
+              element={<Industries onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/promotions"
+              element={<Promotions onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/services/:category/:slug"
+              element={<ServicePage onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/privacypolicy"
+              element={<PrivacyPolicy onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/TermsAndConditions"
+              element={<TermsAndConditions onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/careers"
+              element={<Career onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/blogs"
+              element={<Blogs onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/singleBlog/:id"
+              element={<SingleBlog onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/guidelines"
+              element={<Guidelines onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/case-studies"
+              element={<CaseStudies onOpenContact={handleOpenContact} />}
+            />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/createBlog" element={<CreateBlog />} />
+            <Route path="/manageblogs" element={<Manageblogs />} />
+            <Route path="/blog-updation" element={<UpdateBlog />} />
+            <Route path="/createCareer" element={<CareerCreation />} />
+            <Route path="/managecareers" element={<SmallCard />} />
+            <Route path="/career-update" element={<CareerUpdate />} />
+          </Routes>
+        </Router>
+      </EditModeProvider>
+    </BrowserRouter>
   );
 }
 
