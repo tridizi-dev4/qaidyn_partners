@@ -169,31 +169,31 @@ const CaseStudies = ({ onOpenContact }) => {
       title: "Managed IT Services",
       icon: feature1,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "Reliable end-to-end IT management that keeps your systems running smoothly and efficiently.",
     },
     {
       title: "Managed Security Services",
       icon: feature2,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "Proactive security monitoring and protection to safeguard your business from evolving threats.",
     },
     {
       title: "Cloud and Infrastructure Services",
       icon: feature3,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "Scalable cloud and infrastructure solutions designed to boost performance and reduce operational costs.",
     },
     {
       title: "Security Assessments and compliance",
       icon: feature4,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "Thorough security audits and compliance readiness to ensure your organization meets every standard.",
     },
     {
       title: "Data Protection and Recovery",
       icon: feature5,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+        "Robust backup and recovery solutions that secure your data and restore operations without disruption.",
     },
   ];
 
@@ -592,8 +592,7 @@ const CaseStudies = ({ onOpenContact }) => {
             </h2>
 
             <p className="cs-testimonial-subtitle">
-              Read testimonials from our satisfied clients. See how our
-              infrastructure services made a difference.
+              We actively review every interaction to refine our approach, enhance quality, and ensure your experience consistently improves.
             </p>
 
             <div className="cs-slider-controls">

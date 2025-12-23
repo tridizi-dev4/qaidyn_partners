@@ -51,33 +51,57 @@
   /* margin-left: -2vw; */
 }
 
+/* ===============================
+   SUCCESS + PROCESS SECTION
+================================ */
 .success-process-section {
-  max-width: 80vw;
-  margin: 2vw auto 6vw;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 16px;
+  font-family: "Inter", sans-serif;
 }
 
-/* LEFT: big heading + stats */
+/* ===============================
+   TOP ROW: TITLE + STATS
+================================ */
 .success-left {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 592px 592px; /* Figma exact */
+  column-gap: 40px;
   align-items: center;
-  width: 100%;
-  /* border: 1px solid red; */
-  gap: 10vw;
-  margin-bottom: 2vw;
+  margin-bottom: 64px;
 }
 
+/* Title + subtitle wrapper */
+.success-left > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Figma gap */
+}
+
+/* ===============================
+   TITLE
+================================ */
 .success-title {
-  font-size: 2.2rem; /* larger and bold */
-  color: #06222f;
-  margin: 0 0 0.6rem 0;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+  color: #111827;
+  width: 592px;
+  margin: 0;
 }
 
+/* ===============================
+   SUBTITLE
+================================ */
 .success-sub {
-  color: #6b7a7b;
-  margin-bottom: 1.8rem;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #111827;
+  width: 592px;
+  margin: 0;
 }
 
 /* grid of small stat blocks (2x2) */
@@ -106,81 +130,145 @@
 }
 
 .stat-text .stat-number {
-  font-weight: 800;
-  color: #02194a;
-  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111827;
+  font-size: 36px;
   text-align: left;
+  font-family: "Inter", sans-serif;
+  line-height: 45px;
 }
 
 .stat-text .stat-label {
-  font-size: 0.85rem;
-  color: #5d6b6e;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111827;
   margin-top: 0.15rem;
+   line-height: 24px;
+   font-family: "Inter", sans-serif;
 }
 
-/* RIGHT: process cards column */
+
+/* ===============================
+   PROCESS SECTION (BOTTOM)
+================================ */
 .process-right {
-  display: flex;
-  flex-direction: row;
-  gap: 20vw;
-  margin-left: 2vw;
-  margin-top: 5vw;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 64px;
+  align-items: flex-start;
 }
 
+/* ===============================
+   PROCESS LEFT TEXT
+================================ */
 .process-heading {
-  font-size: 2.2rem; /* larger and bold */
-  color: #06222f;
-  margin: 0 0 0.6rem 0;
+  font-size: 24px;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  color: #111827;
+  margin-bottom: 12px;
 }
 
 .process-desc {
-  color: #657670;
-  margin-bottom: 1.2rem;
-  width: 28vw;
+  font-size: 14px;
+  line-height: 22px;
+  color: #6b7280;
+  margin-bottom: 20px;
 }
 
-/* stacked cards */
+/* CTA Button */
+.cta-btn {
+  background: #6d28d9;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #5b21b6;
+}
+
+/* ===============================
+   PROCESS CARDS
+================================ */
 .process-cards {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1.4rem;
+  gap: 20px;
 }
 
 .process-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1rem;
   display: flex;
-  gap: 1rem;
-  align-items: center;
-  box-shadow: 0 8px 24px rgba(2, 25, 74, 0.06);
-  border: 1px solid rgba(2, 25, 74, 0.03);
+  gap: 16px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
 .card-icon {
-  width: 54px;
-  height: 54px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  background: #e0f2fe;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(6, 61, 52, 0.06);
-  font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
-.card-content .card-title {
-  font-weight: 700;
-  color: #0b2b2a;
-  margin-bottom: 0.25rem;
+.card-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.card-content .card-text {
-  color: #6a7b7a;
-  font-size: 0.92rem;
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
 }
+
+.card-text {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 20px;
+}
+
+/* ===============================
+   RESPONSIVE (TABLET & MOBILE)
+================================ */
+@media (max-width: 1024px) {
+  .success-left {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .stats-grid {
+    width: 100%;
+  }
+
+  .process-right {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .success-title {
+    font-size: 32px;
+    line-height: 40px;
+    width: 100%;
+  }
+
+  .success-sub {
+    width: 100%;
+  }
+}
+
 
 /* CTA button */
 .cta-btn {

@@ -457,13 +457,13 @@ const Navbar = ({ openContactModal }) => {
             </a>
 
             {/* 🔥 Global Edit button */}
-            <button
+            {/* <button
               type="button"
               className="edit-toggle-btn"
               onClick={toggleEditMode}
             >
               {isEditMode ? "Save Page" : "Edit Page"}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

@@ -26,6 +26,29 @@ const ServicePage = ({ onOpenContact }) => {
   const [twoColumnImage, setTwoColumnImage] = useState(null);
   const [testimonialPhoto, setTestimonialPhoto] = useState(null);
 
+  const splitTitle = (title) => {
+  // If & exists → split by &
+  if (title.includes("&")) {
+    const [first, second] = title.split("&");
+    return {
+      first: first.trim(),
+      second: second.trim(),
+      hasAmp: true,
+    };
+  }
+
+  // If no & → split by words (half)
+  const words = title.split(" ");
+  const mid = Math.ceil(words.length / 2);
+
+  return {
+    first: words.slice(0, mid).join(" "),
+    second: words.slice(mid).join(" "),
+    hasAmp: false,
+  };
+};
+
+
   // when route (category/slug) changes, go to top
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -151,60 +174,85 @@ const ServicePage = ({ onOpenContact }) => {
 
         {/* PROCESS SECTION */}
         <section
-          className="helpdesk-process"
-          contentEditable={isEditMode}
-          suppressContentEditableWarning={true}
-        >
-          <div className="helpdesk-process-inner">
-            <h2 className="helpdesk-section-title">{process.title}</h2>
-            <p className="helpdesk-section-subtitle">{process.subtitle}</p>
+  className="helpdesk-process"
+  contentEditable={isEditMode}
+  suppressContentEditableWarning={true}
+>
+  <div className="helpdesk-process-inner">
+    <h2 className="helpdesk-section-title">{process.title}</h2>
+    <p className="helpdesk-section-subtitle">{process.subtitle}</p>
 
-            <div className="helpdesk-process-grid">
-              <div className="helpdesk-process-col">
-                {process.leftCards.map((card, idx) => (
-                  <div className="helpdesk-process-card" key={idx}>
-                    <div className="helpdesk-process-icon">
-                      <img src={card.icon} alt={card.title} />
-                    </div>
-                    <h3>{card.title}</h3>
-                    <p>{card.text}</p>
-                  </div>
-                ))}
+    <div className="helpdesk-process-grid">
+      {/* LEFT CARDS */}
+      <div className="helpdesk-process-col">
+        {process.leftCards.map((card, idx) => {
+          const { first, second, hasAmp } = splitTitle(card.title);
+
+          return (
+            <div className="helpdesk-process-card" key={idx}>
+              <div className="helpdesk-process-icon">
+                <img src={card.icon} alt={card.title} />
               </div>
 
-              <div className="helpdesk-process-center-image">
-                <img
-                  src={processCenterImage || process.centerImage}
-                  alt="Process"
-                />
-                {isEditMode && (
-                  <div className="helpdesk-image-upload">
-                    <label className="helpdesk-upload-label">
-                      Change Process Image:
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handleImageChange(setProcessCenterImage)}
-                      />
-                    </label>
-                  </div>
-                )}
-              </div>
+              <h3 className="helpdesk-process-title">
+                <span className="before">{first}</span>
+                {hasAmp && <span className="amp"> & </span>}
+                <span className="after">{second}</span>
+              </h3>
 
-              <div className="helpdesk-process-col">
-                {process.rightCards.map((card, idx) => (
-                  <div className="helpdesk-process-card" key={idx}>
-                    <div className="helpdesk-process-icon">
-                      <img src={card.icon} alt={card.title} />
-                    </div>
-                    <h3>{card.title}</h3>
-                    <p>{card.text}</p>
-                  </div>
-                ))}
-              </div>
+              <p>{card.text}</p>
             </div>
+          );
+        })}
+      </div>
+
+      {/* CENTER IMAGE */}
+      <div className="helpdesk-process-center-image">
+        <img
+          src={processCenterImage || process.centerImage}
+          alt="Process"
+        />
+
+        {isEditMode && (
+          <div className="helpdesk-image-upload">
+            <label className="helpdesk-upload-label">
+              Change Process Image:
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange(setProcessCenterImage)}
+              />
+            </label>
           </div>
-        </section>
+        )}
+      </div>
+
+      {/* RIGHT CARDS */}
+      <div className="helpdesk-process-col">
+        {process.rightCards.map((card, idx) => {
+          const { first, second, hasAmp } = splitTitle(card.title);
+
+          return (
+            <div className="helpdesk-process-card" key={idx}>
+              <div className="helpdesk-process-icon">
+                <img src={card.icon} alt={card.title} />
+              </div>
+
+              <h3 className="helpdesk-process-title">
+                <span className="before">{first}</span>
+                {hasAmp && <span className="amp"> & </span>}
+                <span className="after">{second}</span>
+              </h3>
+
+              <p>{card.text}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* TWO COLUMN */}
         <section
@@ -296,13 +344,7 @@ const ServicePage = ({ onOpenContact }) => {
                 <div className="helpdesk-related-card" key={item.slug}>
                   <div className="helpdesk-related-icon" />
                   <h3>{item.title}</h3>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce pulvinar, sapien ac facilisis gravida, velit arcu
-                    consequat.
-                  </p>
-
+                  <p>{item.hero?.desc}</p>
                   <Link
                     to={`/services/${item.category}/${item.slug}`}
                     className="helpdesk-link-btn"
