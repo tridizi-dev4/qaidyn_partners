@@ -50,49 +50,49 @@ const Industries = ({ onOpenContact }) => {
       title: "Healthcare",
       icon: icon1,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "Secure, compliant, and efficient IT solutions that keep patient data protected and operations running flawlessly.",
     },
     {
       title: "Finance and Professional Services",
       icon: icon2,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "Robust, high-security IT infrastructure designed to safeguard financial data and streamline professional workflows.",
     },
     {
       title: "Education",
       icon: icon3,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "Smart, scalable IT systems that enhance digital learning, collaboration, and institutional efficiency.",
     },
     {
       title: "Manufacturing",
       icon: icon4,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "Reliable IT support that improves production efficiency, automation, and overall operational continuity.",
     },
     {
       title: "Logistics",
       icon: icon5,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "Technology solutions that optimize tracking, coordination, and real-time supply chain visibility.",
     },
     {
       title: "Retail",
       icon: icon6,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "Seamless IT systems that enhance customer experience, inventory accuracy, and multi-channel sales operations.",
     },
     {
       title: "Software Companies",
       icon: icon7,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "Supporting development teams with scalable, secure, and performance-driven IT environments.",
     },
     {
       title: "E-Commerce",
       icon: icon8,
       description:
-        "Lorem ipsum content is the dummy text which appears for the website site formation purpose.",
+        "High-availability IT solutions that ensure fast, secure, and flawless online shopping experiences.",
     },
   ];
 
@@ -101,25 +101,25 @@ const Industries = ({ onOpenContact }) => {
       title: "Managed IT Services",
       icon: service1,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, sapien ac facilisis gravida.",
+        "Reliable end-to-end IT management that keeps your systems running smoothly and efficiently.",
     },
     {
       title: "Managed Security Services",
       icon: service2,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, sapien ac facilisis gravida.",
+        "Reliable end-to-end IT management that keeps your systems running smoothly and efficiently.",
     },
     {
       title: "Cloud and Infrastructure services",
       icon: service3,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, sapien ac facilisis gravida.",
+        "Scalable cloud and infrastructure solutions designed to boost performance and reduce operational costs.",
     },
     {
       title: "Security Assessments and compliance",
       icon: service4,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, sapien ac facilisis gravida.",
+        "Scalable cloud and infrastructure solutions designed to boost performance and reduce operational costs.",
     },
   ];
 
@@ -245,7 +245,6 @@ const Industries = ({ onOpenContact }) => {
       <header className="industries-header">
         <Navbar />
       </header>
-
       <main className="industries-main">
         {/* HERO */}
         <section
@@ -255,8 +254,7 @@ const Industries = ({ onOpenContact }) => {
         >
           <h1 className="industries-title">Serving Industries</h1>
           <p className="industries-subtitle">
-            We use only the best quality materials on the market in order to
-            provide the best products to our patients.
+           Delivering tailored IT solutions that empower industries to operate<br></br> smarter, safer, and more efficiently.
           </p>
         </section>
 
@@ -430,11 +428,9 @@ const Industries = ({ onOpenContact }) => {
         >
           <div className="content-consult-left">
             <h2 className="content-title">
-              Lorem Ipsum Content Is The Dummy Text
-            </h2>
+Talk to Our Technology Specialists            </h2>
             <p className="content-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              pulvinar, sapien ac facilisis gravida, velit arcu consequat.
+              Connect with our experts for tailored guidance and solutions designed to strengthen your IT performance.
             </p>
             <button className="content-btn">
               <span>Learn More</span>
@@ -483,11 +479,9 @@ const Industries = ({ onOpenContact }) => {
           <div className="industries-cta-inner">
             <div className="industries-cta-text">
               <h3 className="industries-cta-title">
-                Lorem Ipsum content is dummy text
-              </h3>
+Get in Touch With Us              </h3>
               <p className="industries-cta-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                consectetur adipiscing elit. Fusce.
+                Have a question or need support? Our team is ready to assist you with all your IT service needs
               </p>
             </div>
             <div className="industries-cta-actions">

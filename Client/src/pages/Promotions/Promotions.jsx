@@ -8,7 +8,7 @@ import heroImg from "../../assets/promotions/image 3.png";
 import featureImg from "../../assets/promotions/Group 1304.png";
 import australiaImg from "../../assets/promotions/Australia.png";
 import australiaFlag from "../../assets/promotions/Australiaflag.png";
-import ctaImg from "../../assets/promotions/freepik--Laptop--inject-23.png";
+import ctaImg from "../../assets/promotions/image 3.png";
 
 import Icon1 from "../../assets/AboutUs/aboutIcon.png";
 import Icon4 from "../../assets/AboutUs/aboutIcon4.png";
@@ -81,13 +81,12 @@ const Promotions = ({ onOpenContact }) => {
           <div className="promotions-hero-inner">
             <div className="promotions-hero-left">
               <h1 className="promotions-hero-heading">
-                Lorem Ipsum Content
+                Unlock Exclusive 
                 <br />
-                is dummy
+                Managed IT Savings
               </h1>
               <p className="promotions-hero-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                pulvinar, sapien ac facilisis gravida, velit arcu consequat.
+              Unlock reliable, secure, and scalable IT support at a special promotional price. Keep your systems running smoothly while we handle the complexity behind the scenes.
               </p>
               <button
                 type="button"
@@ -205,19 +204,18 @@ const Promotions = ({ onOpenContact }) => {
             </div>
             <div className="promotions-feature-right">
               <h2 className="promotions-feature-heading">
-                Lorem Ipsum Content
+                Transform Your Business 
                 <br />
-                is dummy text
+                with Expert Managed IT
               </h2>
               <p className="promotions-feature-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                pulvinar, sapien ac facilisis gravida, velit arcu consequat.
+                Boost productivity, reduce downtime, and secure your operations with our end-to-end Managed IT Services
               </p>
               <ul className="promotions-feature-list">
-                <li>Lorem ipsum content.</li>
-                <li>Lorem ipsum content</li>
-                <li>Lorem ipsum Content</li>
-                <li>Lorem ipsum Content</li>
+                <li>Proactive Monitoring</li>
+                <li>Enhanced Security</li>
+                <li>Scalable Support</li>
+                <li>Cost-Effective Plans</li>
               </ul>
             </div>
           </div>
@@ -232,14 +230,13 @@ const Promotions = ({ onOpenContact }) => {
           <div className="promotions-map-wrapper">
             <div className="promotions-map-heading">
               <h2 className="promotions-map-title">
-                Huge Australia Network of
+                Your Trusted IT Partner Across Australia
               </h2>
               <p className="promotions-map-title-accent">Qaidyn Partners</p>
             </div>
 
             <p className="promotions-map-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              pulvinar, sapien ac facilisis gravida, velit arcu.
+              Delivering reliable, secure, and future-ready IT services to businesses across every corner of Australia.
             </p>
 
             <div className="promotions-map-inner">
@@ -303,13 +300,12 @@ const Promotions = ({ onOpenContact }) => {
           <div className="promotions-cta-inner">
             <div className="promotions-cta-text">
               <h2 className="promotions-cta-heading">
-                Lorem Ipsum content is
+                Let’s Build a Smarter, Secure 
                 <br />
-                dummy text
+                IT Future Together
               </h2>
               <p className="promotions-cta-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa.
+            Have a question or need expert support? Reach out to our team today—we’re here to provide fast, reliable guidance and the right IT solutions for your business.
               </p>
               <button
                 className="promotions-cta-btn"

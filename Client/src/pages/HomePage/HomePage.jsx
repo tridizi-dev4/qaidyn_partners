@@ -30,6 +30,13 @@ import service3 from "../../assets/service3.png";
 import service4 from "../../assets/service4.png";
 import service5 from "../../assets/service5.png";
 
+import feature1 from "../../assets/casestudies/Base feature icon.png";
+import feature2 from "../../assets/casestudies/Base feature icon (1).png";
+import feature3 from "../../assets/casestudies/Base feature icon (2).png";
+import feature4 from "../../assets/casestudies/Base feature icon (3).png";
+import feature5 from "../../assets/casestudies/Group.png";
+
+
 import blog1 from "../../assets/blog1.jpg";
 import blog2 from "../../assets/blog2.webp";
 import blog3 from "../../assets/blog3.jfif";
@@ -37,9 +44,12 @@ import blogimage1 from "../../assets/blogimage1.avif";
 import blogimage2 from "../../assets/blogimage2.jfif";
 import blogimage3 from "../../assets/blogimage3.avif";
 import HomeFooter from "../../components/Footer1/footerHome.jsx";
+
+import quoteImg from "../../assets/quote.png"; 
+
 import { useNavigate } from "react-router-dom";
 
-// 🔥 use global edit mode
+
 import { useEditMode } from "../../components/context/EditModeContext.jsx";
 
 const HomePage = () => {
@@ -53,9 +63,9 @@ const HomePage = () => {
   const { isEditMode } = useEditMode();
 
   const [heroData, setHeroData] = useState({
-    title: "Empowering Your Business with Innovative IT Solutions",
+    title: "Smart, Secure & Reliable Technology Solutions for Today’s Digital World",
     description:
-      "Transform your digital infrastructure with cutting-edge technology solutions designed for modern enterprises. We deliver excellence in every project.",
+      "We help companies modernize their technology with proactive IT management, advanced cybersecurity, cloud optimization, and robust data protection solutions.",
     image: image1,
   });
 
@@ -203,38 +213,40 @@ const HomePage = () => {
     4: ["Backup", "Disaster Recovery", "Ransomware Recovery", "Encryption"],
   };
 
-  const services = [
-    {
-      title: "Managed IT Services",
-      icon: service1,
-      description:
-        "Comprehensive IT management solutions to streamline your operations and boost productivity.",
-    },
-    {
-      title: "Managed Security Services",
-      icon: service2,
-      description:
-        "Advanced security solutions to protect your digital assets and ensure business continuity.",
-    },
-    {
-      title: "Cloud and Infrastructure Services",
-      icon: service3,
-      description:
-        "Scalable cloud infrastructure designed to grow with your business needs.",
-    },
-    {
-      title: "Security Assessments and compliance",
-      icon: service4,
-      description:
-        "Thorough security audits and compliance management for regulatory peace of mind.",
-    },
-    {
-      title: "Data Protection and Recovery",
-      icon: service5,
-      description:
-        "Robust backup and disaster recovery solutions to safeguard your critical data.",
-    },
-  ];
+const services = [
+  {
+    icon: feature1,
+    title: "Managed IT Services",
+    description:
+      "Reliable end-to-end IT management that keeps your systems running smoothly.",
+  },
+  {
+    icon: feature2,
+    title: "Managed Security Services",
+    description:
+      "Proactive security monitoring and protection against evolving threats.",
+  },
+  {
+    icon: feature3,
+    title: "Cloud & Infrastructure",
+    description:
+      "Scalable cloud and infrastructure solutions to boost performance.",
+  },
+  {
+    icon: feature4,
+    title: "IT Consulting",
+    description:
+      "Expert guidance to align technology with your business goals.",
+  },
+  {
+    icon: feature5,
+    title: "Application Support",
+    description:
+      "Ongoing support and maintenance for business-critical applications.",
+  },
+];
+
+
 
   // ---------- MODAL HANDLERS ----------
   const openServiceModal = (index) => {
@@ -283,7 +295,7 @@ const HomePage = () => {
       name: "Healthcare",
       icon: icon1,
       description:
-        "Secure and compliant IT solutions tailored for healthcare providers and medical facilities",
+        "Secure, compliant, and efficient IT solutions that keep patient data protected and operations running flawlessly.",
       details: [
         "HIPAA-compliant cloud infrastructure and data management",
         "Electronic Health Records (EHR) system integration",
@@ -298,7 +310,7 @@ const HomePage = () => {
       name: "Finance and Professional Services",
       icon: icon2,
       description:
-        "Reliable technology infrastructure for financial institutions and professional service firms",
+        "Robust, high-security IT infrastructure designed to safeguard financial data and streamline professional workflows.",
       details: [
         "PCI DSS compliant payment processing systems",
         "Secure banking application development",
@@ -313,7 +325,7 @@ const HomePage = () => {
       name: "Education",
       icon: icon3,
       description:
-        "Innovative digital solutions empowering educational institutions and e-learning platforms",
+        "Smart, scalable IT systems that enhance digital learning, collaboration, and institutional efficiency.",
       details: [
         "Learning Management System (LMS) implementation",
         "Virtual classroom and video conferencing solutions",
@@ -328,7 +340,7 @@ const HomePage = () => {
       name: "Manufacturing",
       icon: icon4,
       description:
-        "Smart manufacturing solutions with IoT integration and operational efficiency",
+        "Reliable IT support that improves production efficiency, automation, and overall operational continuity.",
       details: [
         "Industrial IoT sensor deployment and monitoring",
         "Predictive maintenance systems using AI/ML",
@@ -343,7 +355,7 @@ const HomePage = () => {
       name: "Logistics",
       icon: icon5,
       description:
-        "Advanced supply chain and logistics management systems for seamless operations",
+        "Technology solutions that optimize tracking, coordination, and real-time supply chain visibility.",
       details: [
         "Real-time fleet tracking and route optimization",
         "Warehouse management system (WMS) implementation",
@@ -358,7 +370,7 @@ const HomePage = () => {
       name: "Retail",
       icon: icon6,
       description:
-        "Modern retail technology solutions for enhanced customer experience and sales",
+        "Seamless IT systems that enhance customer experience, inventory accuracy, and multi-channel sales operations.",
       details: [
         "Omnichannel retail platform development",
         "Point of Sale (POS) system integration",
@@ -373,7 +385,7 @@ const HomePage = () => {
       name: "Software Companies",
       icon: icon7,
       description:
-        "Enterprise-grade infrastructure and DevOps solutions for software development teams",
+        "Supporting development teams with scalable, secure, and performance-driven IT environments.",
       details: [
         "CI/CD pipeline setup and automation",
         "Cloud infrastructure management (AWS, Azure, GCP)",
@@ -388,7 +400,7 @@ const HomePage = () => {
       name: "E-Commerce",
       icon: icon8,
       description:
-        "Scalable e-commerce platforms with secure payment and inventory management",
+        "High-availability IT solutions that ensure fast, secure, and flawless online shopping experiences.",
       details: [
         "Custom e-commerce platform development",
         "Payment gateway integration and PCI compliance",
@@ -518,81 +530,89 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <section className="hero-section" id="home">
-        <div className="container-full">
-          <div className="hero-content">
-            <div className="hero-text animate-on-scroll" id="hero-text">
-              {isEditMode ? (
-                <>
-                  <input
-                    className="hero-input-title"
-                    value={heroData.title}
-                    onChange={(e) =>
-                      setHeroData((prev) => ({
-                        ...prev,
-                        title: e.target.value,
-                      }))
-                    }
-                    placeholder="Hero title"
-                  />
-                  <textarea
-                    className="hero-input-description"
-                    value={heroData.description}
-                    onChange={(e) =>
-                      setHeroData((prev) => ({
-                        ...prev,
-                        description: e.target.value,
-                      }))
-                    }
-                    rows={4}
-                    placeholder="Hero description"
-                  />
-                </>
-              ) : (
-                <>
-                  <h1 className="hero-title">{heroData.title}</h1>
-                  <p className="hero-description">{heroData.description}</p>
-                </>
-              )}
+  {/* 🔹 Background left bands */}
+  <div className="hero-left-band-1"></div>
+  <div className="hero-left-band-2"></div>
 
-              <button className="btn-primary" onClick={openContactModal}>
-                Discover More
-              </button>
-            </div>
-            <div className="hero-image animate-on-scroll" id="hero-image">
-              <img
-                src={heroData.image}
-                alt="Cloud Computing Illustration"
-                className="hero-illustration"
+  <div className="container-full">
+    <div className="hero-content">
+      <div className="hero-text animate-on-scroll" id="hero-text">
+        {isEditMode ? (
+          <>
+            <input
+              className="hero-input-title"
+              value={heroData.title}
+              onChange={(e) =>
+                setHeroData((prev) => ({
+                  ...prev,
+                  title: e.target.value,
+                }))
+              }
+              placeholder="Hero title"
+            />
+            <textarea
+              className="hero-input-description"
+              value={heroData.description}
+              onChange={(e) =>
+                setHeroData((prev) => ({
+                  ...prev,
+                  description: e.target.value,
+                }))
+              }
+              rows={4}
+              placeholder="Hero description"
+            />
+          </>
+        ) : (
+          <>
+            <h1 className="hero-title">{heroData.title}</h1>
+            <p className="hero-description">{heroData.description}</p>
+          </>
+        )}
+
+        <button className="btn-primary" onClick={openContactModal}>
+          Know more
+        </button>
+      </div>
+
+      <div className="hero-image animate-on-scroll" id="hero-image">
+        <img
+          src={heroData.image}
+          alt="Cloud Computing Illustration"
+          className="hero-illustration"
+        />
+
+        {isEditMode && (
+          <div className="hero-image-upload">
+            <label className="hero-upload-label">
+              Change Hero Image:
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleHeroImageChange}
               />
-              {isEditMode && (
-                <div className="hero-image-upload">
-                  <label className="hero-upload-label">
-                    Change Hero Image:
-                    <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleHeroImageChange}
-                    />
-                  </label>
-                </div>
-              )}
-            </div>
+            </label>
           </div>
-        </div>
-      </section>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* Logos Section - Auto-scrolling */}
-      <section className="logos-section">
-        <div className="container-full">
-          <div className="logos-container">
-            {[...companyLogos, ...companyLogos].map((logo, index) => (
-              <div key={index} className="logo-item">
-                <img src={logo.src} alt={logo.alt} />
-              </div>
-            ))}
-          </div>
+
+ <section className="logos-section">
+  <div className="logos-wrapper">
+    <div className="logos-track">
+      {[...companyLogos, ...companyLogos].map((logo, index) => (
+        <div key={index} className={`logo-item ${logo.brand}`}>
+          <img src={logo.src} alt={logo.alt} />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* Services Section (two rows layout) */}
       <section
@@ -711,19 +731,25 @@ const HomePage = () => {
 
       {/* Industries Section */}
       <section
-        className="industries-section animate-on-scroll"
-        id="industries"
-        contentEditable={isEditMode}
-        suppressContentEditableWarning={true}
-      >
+  className="industries-section home-industries-section animate-on-scroll"
+  id="industries"
+  contentEditable={isEditMode}
+  suppressContentEditableWarning={true}
+>
+
         <div className="container-full">
-          <div className="industries-header">
-            <span className="quote-mark">,,</span>
-            <h2 className="section-title">Industries we Expertise into</h2>
-          </div>
-          <p className="section-subtitle">
-            Delivering specialized solutions across diverse sectors
-          </p>
+<div className="industries-header">
+  <img src={quoteImg} alt="Quote" className="industries-quote" />
+
+  <div className="industries-text">
+    <h2 className="section-title">Industries we Expertise into</h2>
+    <p className="industries-subtitle">
+      Empowering multiple industries with reliable, secure, and future-ready IT solutions
+    </p>
+  </div>
+</div>
+
+
           <div className="industries-grid">
             {industries.map((industry, index) => (
               <div
@@ -751,7 +777,7 @@ const HomePage = () => {
                     openIndustryModal(index);
                   }}
                 >
-                  Learn More →
+                  See Explained →
                 </a>
               </div>
             ))}
@@ -819,7 +845,7 @@ const HomePage = () => {
 
           <div className="stats-grid">
             <div className="stat-item">
-              <img src={Icon1} alt="Employees working" />
+              <img src={Icon3} alt="Employees working" />
               <div className="stat-text">
                 <div className="stat-number">100+</div>
                 <div className="stat-label">Employees working</div>
@@ -843,7 +869,7 @@ const HomePage = () => {
             </div>
 
             <div className="stat-item">
-              <img src={Icon3} alt="Clients" />
+              <img src={Icon1} alt="Clients" />
               <div className="stat-text">
                 <div className="stat-number">100+</div>
                 <div className="stat-label">Clients</div>
@@ -888,10 +914,9 @@ const HomePage = () => {
                   />
                 </div>
                 <div className="step-content">
-                  <h3 className="step-title">Get consultation</h3>
+                  <h3 className="step-title">Discover & Analyze</h3>
                   <p className="step-description">
-                    Schedule a free consultation to discuss your unique business
-                    needs and challenges
+                    We understand your business, assess your IT landscape, and identify gaps to create the right technology roadmap.
                   </p>
                 </div>
               </div>
@@ -904,10 +929,9 @@ const HomePage = () => {
                   />
                 </div>
                 <div className="step-content">
-                  <h3 className="step-title">Service Evaluation</h3>
+                  <h3 className="step-title">Implement & Optimize</h3>
                   <p className="step-description">
-                    Comprehensive assessment of your current infrastructure and
-                    tailored solution design
+                    Our team deploys tailored solutions, configures systems, and fine-tunes performance for seamless operations.
                   </p>
                 </div>
               </div>
@@ -920,10 +944,9 @@ const HomePage = () => {
                   />
                 </div>
                 <div className="step-content">
-                  <h3 className="step-title">Start Working</h3>
+                  <h3 className="step-title">Monitor & Support</h3>
                   <p className="step-description">
-                    Seamless implementation with ongoing support and continuous
-                    optimization
+                    We provide continuous monitoring, proactive issue resolution, and dedicated support to ensure everything runs smoothly.
                   </p>
                 </div>
               </div>
@@ -934,48 +957,53 @@ const HomePage = () => {
 
       {/* Blogs Section */}
       <section
-        className="blogs-section animate-on-scroll"
-        id="blogs"
-        contentEditable={isEditMode}
-        suppressContentEditableWarning={true}
-      >
-        <div className="container-full">
-          <h2 className="section-title blue-title">Our Blogs</h2>
-          <h3 className="section-subtitle-large">Latest Post</h3>
-          <div className="blogs-grid">
-            {blogs.map((blog, index) => (
-              <div
-                key={index}
-                className="blog-card"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => openBlogModal(index)}
-              >
-                <div className="blog-image">
-                  <img
-                    src={blog.image}
-                    alt={blog.title}
-                    className="blog-image-img"
-                  />
-                </div>
-                <h4 className="blog-title">{blog.title}</h4>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <div className="author-avatar">
-                      <img
-                        src={blog.authorImage}
-                        alt={blog.author}
-                        className="author-avatar-img"
-                      />
-                    </div>
-                    <span className="author-name">{blog.author}</span>
-                  </div>
-                  <span className="blog-date">{blog.date}</span>
-                </div>
+  className="blogs-section animate-on-scroll"
+  id="blogs"
+  contentEditable={isEditMode}
+  suppressContentEditableWarning={true}
+>
+  <div className="blogs-container">
+    <h2 className="blogs-heading">Our Blogs</h2>
+    <h3 className="blogs-subheading">Latest Post</h3>
+
+    <div className="blogs-grid">
+      {blogs.map((blog, index) => (
+        <div
+          key={index}
+          className="blogs-card"
+          style={{ animationDelay: `${index * 0.1}s` }}
+          onClick={() => openBlogModal(index)}
+        >
+          <div className="blogs-image">
+            <img
+              src={blog.image}
+              alt={blog.title}
+              className="blogs-image-img"
+            />
+          </div>
+
+          <h4 className="blogs-card-title">{blog.title}</h4>
+
+          <div className="blogs-meta">
+            <div className="blogs-author">
+              <div className="blogs-author-avatar">
+                <img
+                  src={blog.authorImage}
+                  alt={blog.author}
+                  className="blogs-author-img"
+                />
               </div>
-            ))}
+              <span className="blogs-author-name">{blog.author}</span>
+            </div>
+
+            <span className="blogs-date">{blog.date}</span>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Blog Modal */}
       {activeBlogModal !== null && (
@@ -1030,10 +1058,9 @@ const HomePage = () => {
       >
         <div className="cta-content">
           <div className="cta-text">
-            <h2 className="cta-title">Ready to Transform Your Business?</h2>
+            <h2 className="cta-title">Let’s Build a Smarter, Secure IT Future Together</h2>
             <p className="cta-description">
-              Partner with us to unlock the full potential of your digital
-              infrastructure. Let's build something amazing together.
+              Have a question or need expert support? Reach out to our team today—we’re here to provide fast, reliable guidance and the right IT solutions for your business.
             </p>
 
             <button
@@ -1041,7 +1068,7 @@ const HomePage = () => {
               className="btn-secondary"
               onClick={openContactModal}
             >
-              Get Started
+              Know more
             </button>
           </div>
           <div className="cta-image">

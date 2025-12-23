@@ -65,10 +65,7 @@ const AboutPage = ({ onOpenContact }) => {
         <div className="cloud-left">
           <h1 className="cloud-title">Fully Managed Cloud &amp; Server Services</h1>
           <p className="cloud-desc">
-            Lorem ipsum content is the dummy text which appears for the website
-            site formation purpose. Lorem ipsum content is the dummy text which.
-            Lorem ipsum content is the dummy text which appears for the website
-            site formation purpose. Lorem ipsum content is the dummy text which.
+           At Qaidyn, we deliver end-to-end technology services that help organizations operate smarter, scale faster, and stay secure. With a commitment to excellence and innovation, we support businesses across industries with reliable IT management, modern infrastructure, and advanced cybersecurity solutions.
           </p>
         </div>
 
@@ -171,8 +168,7 @@ const AboutPage = ({ onOpenContact }) => {
           <div>
             <h3 className="process-heading">Our Process</h3>
             <p className="process-desc">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa.
+              A streamlined, transparent, and efficient workflow designed to deliver reliable IT solutions with speed, precision, and measurable outcomes.
             </p>
             <button
               className="cta-btn"
@@ -186,30 +182,27 @@ const AboutPage = ({ onOpenContact }) => {
             <div className="process-card">
               <div className="card-icon">👤</div>
               <div className="card-content">
-                <div className="card-title">Get consultation</div>
+                <div className="card-title">Discover & Analyze</div>
                 <div className="card-text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing
-                </div>
+We understand your business, assess your IT landscape, and identify gaps to create the right technology roadmap.                </div>
               </div>
             </div>
 
             <div className="process-card">
               <div className="card-icon">💳</div>
               <div className="card-content">
-                <div className="card-title">Service Evalution</div>
+                <div className="card-title">Implement & Optimize</div>
                 <div className="card-text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing
-                </div>
+Our team deploys tailored solutions, configures systems, and fine-tunes performance for seamless operations.                </div>
               </div>
             </div>
 
             <div className="process-card">
               <div className="card-icon">⚙️</div>
               <div className="card-content">
-                <div className="card-title">Start Working</div>
+                <div className="card-title">Monitor & Support</div>
                 <div className="card-text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing
-                </div>
+We provide continuous monitoring, proactive issue resolution, and dedicated support to ensure everything runs smoothly.                </div>
               </div>
             </div>
           </div>

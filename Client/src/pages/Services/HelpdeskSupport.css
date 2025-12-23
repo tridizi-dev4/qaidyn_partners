@@ -90,7 +90,7 @@
   line-height: 133%;
   opacity: 0.66;
   margin: 16px 0 24px;
-  color: #084162;
+  color: #000000;
 }
 
 .helpdesk-primary-btn {
@@ -208,7 +208,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 28.5px;
-  color: #4b5b70;
+  color: #556987;
 }
 
 /* GRID: left cards (296), image (336.75), right cards (296) */
@@ -235,7 +235,6 @@
   width: 296px;
   min-height: 237px;
   border-radius: 16px;
-  border: 1px solid #c7e4ff;
   padding: 32px 24px;
   text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -271,6 +270,27 @@
   font-weight: 600;
   color: #084162;
 }
+
+.helpdesk-process-title {
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.helpdesk-process-title .before {
+  color: #0088FF;
+}
+
+.helpdesk-process-title .amp {
+  color: #084162;
+}
+
+.helpdesk-process-title .after {
+  color: #215876;
+}
+
+
 
 .helpdesk-process-card p {
   font-family: "Poppins", sans-serif;
@@ -461,6 +481,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -20px;
 }
 
 .helpdesk-feature-icon img {
