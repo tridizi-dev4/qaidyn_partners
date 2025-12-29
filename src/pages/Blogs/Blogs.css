@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 .blogspage-page {
   font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
@@ -9,7 +10,7 @@
 .blogspage-header {
   text-align: center;
   padding: 80px 20px 60px;
-color: #011632;
+  color: #011632;
   margin-bottom: 60px;
 }
 
@@ -17,6 +18,7 @@ color: #011632;
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 16px;
+  font-family: 'Rubik';
 }
 
 .blogspage-subtitle {
@@ -24,6 +26,9 @@ color: #011632;
   max-width: 700px;
   margin: 0 auto 32px;
   opacity: 0.9;
+  font-family: 'Rubik';
+  color: #3c4959;
+  letter-spacing: 1.5%;
 }
 
 .blogspage-search-container {
@@ -38,8 +43,9 @@ color: #011632;
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   outline: none;
+  border: 1.08px solid #cfcfcf;
 }
 
 .blogspage-search-icon {
@@ -51,7 +57,6 @@ color: #011632;
   cursor: pointer;
   color: #6c5ce7;
 }
-
 
 .blogspage-grid {
   max-width: 90vw;
@@ -66,15 +71,15 @@ color: #011632;
   background: white;
   border-radius: 7px;
   overflow: hidden;
-height: 25vw;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  height: 25vw;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  background-color: #D5FAFC;
+  background-color: #d5fafc;
 }
 
 .blogpage-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .blogpage-image-wrapper {
@@ -91,15 +96,13 @@ height: 25vw;
   transition: transform 0.4s ease;
 }
 
-
-
 .blogpage-content {
   padding: 24px;
 }
 
 .blogpage-category {
   display: inline-block;
-background: #0071FF;
+  background: #0071ff;
   color: white;
   padding: 6px 14px;
   border-radius: 5px;
@@ -112,7 +115,7 @@ background: #0071FF;
   font-size: 1vw;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #0071FF;
+  color: #0071ff;
 }
 
 .blogpage-excerpt {
@@ -189,7 +192,7 @@ background: #0071FF;
 .featuredpage-right img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 968px) {
@@ -241,82 +244,82 @@ background: #0071FF;
     font-size: 28px;
   }
   .blogspage-search-input {
-  width: 90%;
-}
-.blogpage-card {
-height: 80vw;
-}
-.blogpage-image-wrapper {
-  height: 200px;
-  overflow: hidden;
-}
+    width: 90%;
+  }
+  .blogpage-card {
+    height: 80vw;
+  }
+  .blogpage-image-wrapper {
+    height: 200px;
+    overflow: hidden;
+  }
 
-.blogpage-image {
-  width: 92%;
-  height: 90%;
-  margin: 3vw;
-}
-.blogpage-category {
-  display: inline-block;
-background: #0071FF;
-  color: white;
-  padding: 3px 10px;
-  border-radius: 5px;
-  font-size: 3vw;
-  font-weight: 600;
-}
+  .blogpage-image {
+    width: 92%;
+    height: 90%;
+    margin: 3vw;
+  }
+  .blogpage-category {
+    display: inline-block;
+    background: #0071ff;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 3vw;
+    font-weight: 600;
+  }
 
-.blogpage-content {
-  padding: 0px 15px;
-}
+  .blogpage-content {
+    padding: 0px 15px;
+  }
 
-.blogpage-title {
-  font-size: 3vw;
-  font-weight: 700;
-  color: #0071FF;
-}
+  .blogpage-title {
+    font-size: 3vw;
+    font-weight: 700;
+    color: #0071ff;
+  }
 
-.blogpage-excerpt {
-  color: #666;
-  font-size: 3vw;
-  margin-bottom: 16px;
+  .blogpage-excerpt {
+    color: #666;
+    font-size: 3vw;
+    margin-bottom: 16px;
+  }
+  .blogspage-featured h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .featuredpage-desc {
+    color: #666;
+    width: 92vw;
+    text-align: center;
+    font-size: 14px;
+  }
+  .featuredpage-icon {
+    width: 40px;
+    height: 40px;
+    background: #6c5ce7;
+    border-radius: 6px;
+    font-size: 3vw;
+  }
+  .featuredpage-item {
+    padding: 3vw;
+    border-radius: 2vw;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  .featuredpage-item p {
+    width: 70vw;
+    font-size: 4vw;
+  }
+  .blogsNotFound {
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid;
+    width: 87vw;
+    font-size: 2vw;
+    color: #666;
+  }
 }
-.blogspage-featured h2 {
-  font-size: 20px;
-  text-align: center;
-}
-.featuredpage-desc {
-  color: #666;
-  width: 92vw;
-  text-align: center;
-  font-size: 14px;
-}
-.featuredpage-icon {
-  width: 40px;
-  height: 40px;
-  background: #6c5ce7;
-  border-radius: 6px;
-font-size: 3vw;
-}
-.featuredpage-item{
-  padding: 3vw;
-  border-radius: 2vw;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-.featuredpage-item p{
-width: 70vw;
-font-size: 4vw;
-}
-.blogsNotFound{
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid;
-  width: 87vw;
-  font-size: 2vw;
-  color: #666;
-}
-}
-.blogsNotFound{
+.blogsNotFound {
   text-align: center;
   width: 87vw;
   font-size: 1.4vw;
@@ -324,6 +327,8 @@ font-size: 4vw;
 }
 
 .helpdesk-two-column {
+  width: 85%;
+  margin: 0 auto;
   padding: 80px 215px 100px;
   background: #ffffff;
 }
@@ -334,14 +339,13 @@ font-size: 4vw;
   animation: helpdesk-fade-up 0.9s ease-out both;
 }
 
-
 .helpdesk-two-header {
   margin-bottom: 40px;
 }
 
 .helpdesk-two-title {
   max-width: 846px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 44px;
@@ -352,21 +356,19 @@ font-size: 4vw;
 
 .helpdesk-two-subtitle {
   max-width: 926px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 28.5px;
-  color: #727272;
+  color: #556987;
   margin: 0;
 }
-
 
 .helpdesk-two-body {
   display: flex;
   align-items: flex-start;
   gap: 64px;
 }
-
 
 .helpdesk-feature-list {
   list-style: none;
@@ -377,9 +379,8 @@ font-size: 4vw;
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 32px;
 }
-
 
 .helpdesk-feature-list li {
   display: flex;
@@ -389,7 +390,6 @@ font-size: 4vw;
   gap: 10px;
 }
 
-
 .helpdesk-feature-list .dot {
   width: 64px;
   height: 64px;
@@ -398,7 +398,6 @@ font-size: 4vw;
   flex-shrink: 0;
 }
 
-
 .helpdesk-feature-list li div {
   display: flex;
   flex-direction: column;
@@ -406,26 +405,23 @@ font-size: 4vw;
   max-width: 315px;
 }
 
-
 .helpdesk-feature-list h4 {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   color: #000000;
 }
 
-
 .helpdesk-feature-list p {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 100%;
   color: rgba(39, 39, 39, 0.86);
 }
-
 
 .helpdesk-two-right img {
   width: 476.39px;
@@ -461,7 +457,7 @@ font-size: 4vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -20px;
+  margin-top: -40px;
 }
 
 .helpdesk-feature-icon img {
@@ -477,8 +473,10 @@ font-size: 4vw;
 
 .helpdesk-feature-content p {
   margin: 0;
+  color: #727272;
+  font-weight: 500;
+  line-height: 20px;
 }
-
 
 .cs-cta {
   background: #1db5be;
@@ -515,7 +513,7 @@ font-size: 4vw;
   font-weight: 400;
   margin: 0 0 32px;
   max-width: 656px;
-  color: #4D625F;
+  color: #4d625f;
 }
 
 .cs-btn-white {
@@ -527,7 +525,7 @@ font-size: 4vw;
   padding: 0 24px;
   border-radius: 8px;
   background: #ffffff;
-  color: #6155F5;
+  color: #6155f5;
   border: none;
   cursor: pointer;
   font-size: 16px;

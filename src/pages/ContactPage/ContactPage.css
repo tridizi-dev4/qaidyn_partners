@@ -48,7 +48,7 @@
 }
 
 .contact-hero-title {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 62px;
   font-weight: 600;
   line-height: 120%;
@@ -58,12 +58,12 @@
 }
 
 .contact-hero-subtitle {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 155%;
   letter-spacing: 0.015em;
-  color: #3C4959;
+  color: #3c4959;
   max-width: 505px;
   margin: 0 auto;
 }
@@ -71,12 +71,10 @@
   display: block;
   width: 326px;
   height: 4px;
-  background-color: #25B4F8;
+  background-color: #25b4f8;
   margin: 0 auto 16px auto;
   border-radius: 2px;
 }
-
-
 
 /* Contact Main Section */
 .contact-main-section {
@@ -106,7 +104,7 @@
   height: 325px;
   background: #ffffff;
   border-radius: 10px;
-  border: 2px solid #25B4F8;
+  border: 2px solid #25b4f8;
   overflow: hidden;
   position: relative;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
@@ -133,7 +131,7 @@
 .contact-map-icon {
   width: 44px;
   height: 44px;
-  background: #25B4F8;
+  background: #25b4f8;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -149,7 +147,7 @@
 }
 
 .contact-map-text h4 {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 16px;
   font-weight: 600;
   color: #011632;
@@ -157,10 +155,10 @@
 }
 
 .contact-map-text p {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 14px;
   font-weight: 400;
-  color: #3C4959;
+  color: #3c4959;
   margin-top: 4px;
   line-height: 20px;
 }
@@ -168,7 +166,7 @@
 /* Info cards (Office Timings, Phone, Email) */
 .contact-info-card {
   width: 503px;
-  height:118px;
+  height: 118px;
   background: #ffffff;
   border-radius: 10px;
   padding: 18px 20px;
@@ -190,7 +188,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #6C63FF;
+  background: #6c63ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,7 +197,7 @@
 
 /* Text inside info cards */
 .contact-info-text h4 {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 18px;
   font-weight: 500;
   color: #011632;
@@ -207,10 +205,10 @@
 }
 
 .contact-info-text p {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 16px;
   font-weight: 400;
-  color: #3C4959;
+  color: #3c4959;
   margin-top: 4px;
   line-height: 18px;
 }
@@ -223,7 +221,6 @@
     width: 100%;
   }
 }
-
 
 .contact-info-card:hover .contact-info-icon {
   transform: scale(1.1);
@@ -269,7 +266,7 @@
   background: #ffffff;
   border-radius: 10px;
   padding: 40px;
-  border: 1px solid #25B4F8;
+  border: 1px solid #25b4f8;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -289,7 +286,7 @@
 
 .form-group label,
 .form-group-half label {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 14px;
   font-weight: 600;
   color: #011632;
@@ -299,15 +296,15 @@
 .form-group-half input,
 .form-group select,
 .form-group textarea,
-.form-group input[type="date"],
-.form-group input[type="email"] {
+.form-group input[type='date'],
+.form-group input[type='email'] {
   width: 100%;
   height: 48px;
   padding: 12px 14px;
   border-radius: 8px;
-  border: 1px solid #E0E6ED;
+  border: 1px solid #e0e6ed;
   background: #ffffff;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 14px;
   color: #011632;
 }
@@ -322,8 +319,8 @@
   height: 48px;
   padding: 12px 14px 12px 90px;
   border-radius: 8px;
-  border: 1px solid #E0E6ED;
-  font-family: "Rubik";
+  border: 1px solid #e0e6ed;
+  font-family: 'Rubik';
   font-size: 14px;
   color: #011632;
 }
@@ -337,7 +334,7 @@
   height: 32px;
   border: none;
   background: transparent;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 14px;
   cursor: pointer;
   outline: none;
@@ -346,14 +343,14 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #9AA4B2;
+  color: #9aa4b2;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #25B4F8;
+  border-color: #25b4f8;
   box-shadow: 0 0 0 3px rgba(37, 180, 248, 0.15);
 }
 
@@ -362,7 +359,6 @@
   resize: none;
 }
 
-
 .btn-submit {
   width: 232px;
   height: 55px;
@@ -370,12 +366,12 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 15px 30px;           /* Figma padding */
-  border-radius: 10px;          /* Figma radius */
+  padding: 15px 30px; /* Figma padding */
+  border-radius: 10px; /* Figma radius */
   border: none;
-  background: #6155F5;          /* Figma primary color */
+  background: #6155f5; /* Figma primary color */
   color: #ffffff;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-size: 16px;
   font-weight: 600;
   line-height: 155%;
@@ -389,7 +385,6 @@
   z-index: 1;
   margin: 60px auto 0 auto;
 }
-
 
 .btn-submit::before {
   content: '';
@@ -433,7 +428,7 @@
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   line-height: 125%;
 }
 
@@ -445,14 +440,14 @@
   transform: translateX(-50%);
   width: 490px;
   height: 4px;
-  background: #25B4F8;
+  background: #25b4f8;
   border-radius: 2px;
 }
 
 .faq-subtitle {
   font-size: 18px;
   color: #011632;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   font-weight: 400;
   line-height: 135%;
 }
@@ -464,7 +459,7 @@
 
 .faq-item {
   background: white;
-  /* border-radius: 15px; */
+  border-radius: 15px;
   border-bottom: 1px solid rgb(208, 208, 208);
   /* margin-bottom: 20px; */
   /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); */
@@ -490,7 +485,7 @@
 }
 
 .faq-item.active .faq-question {
-  background: #6155F5;
+  background: #6155f5;
   color: white;
 }
 
@@ -536,12 +531,12 @@
 .faq-answer.show {
   max-height: 500px;
   padding: 25px 30px;
-  background: #6155F5;
+  background: #6155f5;
 }
 
 .faq-answer p {
   font-size: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 1.8;
 }
 
@@ -582,7 +577,7 @@
 
 .footer-column a {
   text-decoration: none;
-  color: #4A90E2;
+  color: #4a90e2;
   font-size: 14px;
   transition: all 0.3s ease;
   font-weight: 500;
@@ -660,7 +655,7 @@
 }
 
 .footer-bottom a:hover {
-  color: #4A90E2;
+  color: #4a90e2;
 }
 
 /* Animations */
